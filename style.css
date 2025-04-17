@@ -1,0 +1,374 @@
+body{
+    background-image: url(https://img.pikbest.com/photo/20240615/a-man-meditating-in-front-of-sunset-with-the-stars-background_10621991.jpg!w700wp);
+    background-size: cover; /* Ensures one large image fits the screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;  */
+    /* height: 100vh;  */
+    text-align: center;
+    
+}
+.para{
+    color: aliceblue;
+    text-decoration: underline;
+}
+h3{
+    color: aliceblue;
+}
+h1{
+    font-family: cursive;  
+    color: #00FFC4;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%,  50%,  90% { transform: translateX(-5px); }
+    20%,  60%, 80% { transform: translateX(5px); }
+}
+.dlt{
+    position: unset;
+    width: 390px;
+    margin-top: 10px;
+    padding: 15px;
+    height: 50px;
+    background-color: rgb(182, 49, 49);
+    border-radius: 1000px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#dltimg{
+    color: black;
+}
+.input{
+    margin-bottom: 10px;
+    /* box-shadow: 1px 1px 10px; */
+    border: none;
+    height: 50px;
+    width: 390px;
+    font-size: 20px;
+    border-radius: 1000px;
+    background: linear-gradient(#f89c9c, #9491c4);
+    box-shadow: inset 1px 1px 6px;
+    padding-left: 10px;
+    transform: translateY(0);
+    transition: all 0.2s ease;
+
+}
+.input:focus{
+    outline: none;
+}
+form{
+    position: relative;
+}
+.add{
+    position: unset;
+    width: 390px;
+    margin-top: 10px;
+    padding: 15px;
+    height: 50px;
+    background-color: #00FFC4;
+    border-radius: 1000px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+ }
+.add:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+.dlt:hover{
+    background-color: red;
+    color: white;
+    transform: scale(1.08);
+    animation: shake 0.2s ease-in-out;
+}
+.input:active {
+    box-shadow: 
+        0 1px 0 #2a70c2,
+        0 2px 5px rgba(0,0,0,0.2),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+    transform: translateY(10px);
+}
+
+.pending {
+    width: 300px;
+    min-height: 50px; /* Initial height */
+    max-height: 300px;
+    overflow-y: auto;
+    word-wrap: break-word; /* Ensures long words break */
+    white-space: normal; 
+    background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    color: aliceblue;
+    border: 2px solid black;
+    
+}
+.remove{
+    border: none;
+    background-color: transparent;
+    color: red;
+    font-size: 25px;
+    
+}
+.remove:hover{
+    animation: shaking 0.2s ease-in-out;
+}
+
+@keyframes shaking {
+    0%, 100% { transform: translateY(0); }
+    10%,  70% { transform: translateY(-2px); }
+    30%,  80% { transform: translateY(2px); }
+}
+
+.todo{
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.todo .todo-text{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    color: white;
+    transition: 500ms ease;
+    font-size: 25px;
+}
+.delete-btn{
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white; 
+}
+.delete-btn svg {
+    transition: 0.5s ease;
+}
+.delete-btn:hover svg{
+    color: red;
+}
+input[type="checkbox"] {
+    display: none;
+}
+.custom-ckeckbox{
+    border: 2px solid #00FFC4;
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked ~ .custom-ckeckbox{
+    background-color: #00FFC4;
+}
+input[type="checkbox"]:checked ~ .custom-ckeckbox svg{
+    fill: black;
+}
+.todo-item input[type="checkbox"]:checked ~ .custom-checkbox svg path {
+    stroke: black;
+  }
+input[type="checkbox"]:checked ~ .todo-text{
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+@media (min-width: 750px){
+    body{
+        background-image: url('https://static.vecteezy.com/system/resources/previews/030/629/799/large_2x/a-man-meditating-in-front-of-a-colorful-sky-free-photo.jpg');
+        background-size: cover; /* Ensures one large image fits the screen */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repeating */
+        background-attachment: fixed; /* Keeps image fixed when scrolling */
+    }
+    .para{
+        color: rgb(0, 0, 0);
+        text-decoration: underline;
+        font-size: 30px;
+    }
+    h3{
+        color: cornsilk;
+    }
+    h1{
+      font-style: italic;  
+      color: black;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center;  */
+        /* height: 100vh;  */
+        text-align: center;
+        
+    }
+    h1{
+        font-family: cursive;  
+        color: #00FFC4;
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    h3{
+      font-style: italic; 
+      font-size: 50px; 
+    }
+    p{
+        font-size: 30px;
+    }
+    
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        10%,  50%,  90% { transform: translateX(-5px); }
+        20%,  60%, 80% { transform: translateX(5px); }
+    }
+    .dlt{
+        position: unset;
+        width: 300px;
+        margin-top: 10px;
+        padding: 15px;
+        height: 50px;
+        background-color: rgb(182, 49, 49);
+        border-radius: 1000px;
+        border: 1px solid black;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .input{
+        margin-bottom: 10px;
+        /* box-shadow: 1px 1px 10px; */
+        border: none;
+        height: 50px;
+        width: 500px;
+        font-size: 20px;
+        border-radius: 1000px;
+        background: linear-gradient(#f89c9c, #9491c4);
+        box-shadow: inset 1px 1px 6px;
+        padding-left: 10px;
+        transform: translateY(0);
+        transition: all 0.2s ease;
+    
+    }
+    .input:focus{
+        outline: none;
+    }
+    form{
+        position: relative;
+    }
+    .add{
+        position: absolute;
+        right: 0;
+        top: -10px;
+        height: 52px;
+        margin-top: 10px;
+        background-color: #00FFC4;
+        border-radius: 1000px;
+        width: 80px;
+        border: 1px solid black;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+     }
+    .add:hover{
+        transform: scale(1.08);
+    }
+    .dlt:hover{
+        background-color: red;
+        color: white;
+        transform: scale(1.08);
+        animation: shake 0.2s ease-in-out;
+    }
+    .input:active {
+        box-shadow: 
+            0 1px 0 #2a70c2,
+            0 2px 5px rgba(0,0,0,0.2),
+            inset 0 1px 1px rgba(255,255,255,0.3);
+        transform: translateY(10px);
+    }
+    .todo{
+        margin-bottom: 10px;
+        padding: 0 16px;
+        background-color: black;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        width: 300px;
+    }
+    .todo .todo-text{
+        padding: 15px;
+        padding-right: 0;
+        flex-grow: 1;
+        color: white;
+        transition: 500ms ease;
+        font-size: 25px;
+    }
+    .delete-btn{
+        padding: 3px;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: white; 
+    }
+    .delete-btn svg {
+        transition: 0.5s ease;
+    }
+    .delete-btn:hover svg{
+        color: red;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    .custom-ckeckbox{
+        border: 2px solid #00FFC4;
+        border-radius: 50%;
+        min-height: 20px;
+        min-width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        transition: 500ms ease;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked ~ .custom-ckeckbox{
+        background-color: #00FFC4;
+    }
+    input[type="checkbox"]:checked ~ .custom-ckeckbox svg{
+        fill: black;
+    }
+    .todo-item input[type="checkbox"]:checked ~ .custom-checkbox svg path {
+        stroke: black;
+      }
+    input[type="checkbox"]:checked ~ .todo-text{
+        text-decoration: line-through;
+        color: gray;
+    }
+}
